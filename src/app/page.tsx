@@ -7,5 +7,5 @@ import { getServerAuthSession } from "~/server/auth";
 import { api } from "~/trpc/server";
 
 export default function Home() {
-  return <div></div>;
+  return <></>;
 }

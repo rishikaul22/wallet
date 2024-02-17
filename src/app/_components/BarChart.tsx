@@ -178,7 +178,7 @@ const BarChart = () => {
         <>
           <div className="mb-14 flex h-64 w-full flex-row items-center justify-center gap-2 text-gray-500 dark:text-gray-600">
             <LuBarChartHorizontalBig className="rounded-lg text-4xl" />
-            <p className="text-lg ">Add your first transaction</p>
+            <p className="text-lg ">No transactions to show</p>
           </div>
         </>
       ) : (
