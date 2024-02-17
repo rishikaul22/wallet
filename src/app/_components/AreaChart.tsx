@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { BiDownArrow } from "react-icons/bi";
 import { TbChartAreaLineFilled } from "react-icons/tb";
 import { api } from "~/trpc/react";
-const fmt = require("indian-number-format");
+// const fmt = require("indian-number-format");
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const AreaChart = () => {
@@ -32,7 +32,7 @@ const AreaChart = () => {
     }
   }, [isSuccess, isRefetching]);
 
-  let options: ApexOptions = {
+  const options: ApexOptions = {
     chart: {
       zoom: { enabled: false },
       type: "area",
@@ -144,7 +144,7 @@ const AreaChart = () => {
       },
     },
   };
-  let seriesData: ApexAxisChartSeries = [
+  const seriesData: ApexAxisChartSeries = [
     {
       name: "Income",
       data: incomeseries,

@@ -7,7 +7,8 @@ import { BiDownArrow } from "react-icons/bi";
 import { FaArrowCircleDown, FaArrowCircleUp } from "react-icons/fa";
 import { LuBarChartHorizontalBig } from "react-icons/lu";
 import { api } from "~/trpc/react";
-const fmt = require("indian-number-format");
+// const fmt = require("indian-number-format");
+import fmt from "indian-number-format";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const BarChart = () => {
@@ -39,7 +40,7 @@ const BarChart = () => {
     }
   }, [isSuccess, isRefetching]);
 
-  let options: ApexOptions = {
+  const options: ApexOptions = {
     chart: {
       sparkline: {
         enabled: false,
@@ -124,7 +125,7 @@ const BarChart = () => {
     },
   };
 
-  let seriesData: ApexAxisChartSeries = [
+  const seriesData: ApexAxisChartSeries = [
     {
       name: "Savings",
       data: savingsseries,
@@ -140,7 +141,7 @@ const BarChart = () => {
         </div>
         <div className="flex flex-row justify-between">
           <div className="text-start text-2xl font-semibold text-gray-700 dark:text-white">
-            {"₹" + fmt.format(savingsinduration)}
+            {"₹" + (fmt.format(savingsinduration) as string)}
           </div>
           {savingspercent >= 0 ? (
             <div className="badge gap-2 border-0 bg-green-500 text-white">
