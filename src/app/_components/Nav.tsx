@@ -33,7 +33,7 @@ const Nav = ({
           <span className="select-none text-2xl font-semibold">Wallet</span>
         </div>
         {/* Desktop Nav */}
-        <div className="hidden md:block">
+        <div className="block md:block">
           <ul className="flex flex-row items-center justify-center gap-4">
             <li>
               <button
@@ -106,9 +106,9 @@ const Nav = ({
           </ul>
         </div>
         {/* Mobile Nav */}
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           <FiMenu />
-        </div>
+        </div> */}
       </div>
     </nav>
   );
